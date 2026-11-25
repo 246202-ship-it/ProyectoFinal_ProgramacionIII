@@ -1,0 +1,171 @@
+{
+ "dirigido": true,
+ "ponderado": true,
+ "multi": false,
+ "nodos": [
+  {
+   "id": "BovedaCentral",
+   "tipo": "boveda_central",
+   "disponible": 1500000
+  },
+  {
+   "id": "BovedaReserva",
+   "tipo": "boveda_central",
+   "disponible": 300000
+  },
+  {
+   "id": "BovedaArequipa",
+   "tipo": "boveda_regional"
+  },
+  {
+   "id": "BovedaCusco",
+   "tipo": "boveda_regional"
+  },
+  {
+   "id": "BovedaTrujillo",
+   "tipo": "boveda_regional"
+  },
+  {
+   "id": "BovedaPiura",
+   "tipo": "boveda_regional"
+  },
+  {
+   "id": "Ag-Arequipa-1",
+   "tipo": "agencia",
+   "demanda": 180000
+  },
+  {
+   "id": "Ag-Arequipa-2",
+   "tipo": "agencia",
+   "demanda": 120000
+  },
+  {
+   "id": "Ag-Cusco-1",
+   "tipo": "agencia",
+   "demanda": 170000
+  },
+  {
+   "id": "Ag-Cusco-2",
+   "tipo": "agencia",
+   "demanda": 110000
+  },
+  {
+   "id": "Ag-Sicuani",
+   "tipo": "agencia",
+   "demanda": 90000
+  },
+  {
+   "id": "Ag-Trujillo-1",
+   "tipo": "agencia",
+   "demanda": 220000
+  },
+  {
+   "id": "Ag-Piura-1",
+   "tipo": "agencia",
+   "demanda": 95000
+  },
+  {
+   "id": "Ag-Piura-2",
+   "tipo": "agencia",
+   "demanda": 85000
+  }
+ ],
+ "aristas": [
+  {
+   "origen": "BovedaCentral",
+   "destino": "BovedaArequipa",
+   "capacidad": 600000,
+   "costo": 8
+  },
+  {
+   "origen": "BovedaCentral",
+   "destino": "BovedaCusco",
+   "capacidad": 500000,
+   "costo": 10
+  },
+  {
+   "origen": "BovedaCentral",
+   "destino": "BovedaTrujillo",
+   "capacidad": 400000,
+   "costo": 6
+  },
+  {
+   "origen": "BovedaCentral",
+   "destino": "BovedaPiura",
+   "capacidad": 300000,
+   "costo": 9
+  },
+  {
+   "origen": "BovedaReserva",
+   "destino": "BovedaCusco",
+   "capacidad": 200000,
+   "costo": 12
+  },
+  {
+   "origen": "BovedaReserva",
+   "destino": "BovedaArequipa",
+   "capacidad": 150000,
+   "costo": 11
+  },
+  {
+   "origen": "BovedaArequipa",
+   "destino": "BovedaCusco",
+   "capacidad": 150000,
+   "costo": 2.5
+  },
+  {
+   "origen": "BovedaTrujillo",
+   "destino": "BovedaPiura",
+   "capacidad": 200000,
+   "costo": 4
+  },
+  {
+   "origen": "BovedaArequipa",
+   "destino": "Ag-Arequipa-1",
+   "capacidad": 200000,
+   "costo": 1
+  },
+  {
+   "origen": "BovedaArequipa",
+   "destino": "Ag-Arequipa-2",
+   "capacidad": 150000,
+   "costo": 1.5
+  },
+  {
+   "origen": "BovedaCusco",
+   "destino": "Ag-Cusco-1",
+   "capacidad": 180000,
+   "costo": 1
+  },
+  {
+   "origen": "BovedaCusco",
+   "destino": "Ag-Cusco-2",
+   "capacidad": 120000,
+   "costo": 1.2
+  },
+  {
+   "origen": "BovedaCusco",
+   "destino": "Ag-Sicuani",
+   "capacidad": 80000,
+   "costo": 4
+  },
+  {
+   "origen": "BovedaTrujillo",
+   "destino": "Ag-Trujillo-1",
+   "capacidad": 250000,
+   "costo": 1
+  },
+  {
+   "origen": "BovedaPiura",
+   "destino": "Ag-Piura-1",
+   "capacidad": 100000,
+   "costo": 1
+  },
+  {
+   "origen": "BovedaPiura",
+   "destino": "Ag-Piura-2",
+   "capacidad": 90000,
+   "costo": 1.5
+  }
+ ]
+}

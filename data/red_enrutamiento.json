@@ -1,0 +1,300 @@
+{
+ "dirigido": true,
+ "ponderado": true,
+ "multi": true,
+ "nodos": [
+  {
+   "id": "BancoA",
+   "tipo": "entidad"
+  },
+  {
+   "id": "BancoB",
+   "tipo": "entidad"
+  },
+  {
+   "id": "BancoC",
+   "tipo": "entidad"
+  },
+  {
+   "id": "CCE",
+   "tipo": "compensacion"
+  },
+  {
+   "id": "LBTR",
+   "tipo": "compensacion"
+  },
+  {
+   "id": "BilleteraY",
+   "tipo": "plataforma"
+  },
+  {
+   "id": "BilleteraP",
+   "tipo": "plataforma"
+  },
+  {
+   "id": "ProcTarjetas",
+   "tipo": "plataforma"
+  },
+  {
+   "id": "RedATM",
+   "tipo": "atm"
+  },
+  {
+   "id": "AgenciaLima",
+   "tipo": "agencia"
+  },
+  {
+   "id": "AgenciaArequipa",
+   "tipo": "agencia"
+  },
+  {
+   "id": "AgenciaCusco",
+   "tipo": "agencia"
+  }
+ ],
+ "aristas": [
+  {
+   "origen": "BancoA",
+   "destino": "CCE",
+   "canal": "ACH",
+   "comision": 3.0,
+   "comision_pct": 0,
+   "tiempo": 24,
+   "costo": 0.5,
+   "riesgo": 0.02,
+   "limite": 30000
+  },
+  {
+   "origen": "BancoA",
+   "destino": "LBTR",
+   "canal": "LBTR",
+   "comision": 15,
+   "comision_pct": 0,
+   "tiempo": 0.5,
+   "costo": 2,
+   "riesgo": 0.01,
+   "limite": 5000000
+  },
+  {
+   "origen": "BancoA",
+   "destino": "BilleteraY",
+   "canal": "Billetera",
+   "comision": 0,
+   "comision_pct": 0.5,
+   "tiempo": 0.1,
+   "costo": 0.1,
+   "riesgo": 0.05,
+   "limite": 2000
+  },
+  {
+   "origen": "BancoA",
+   "destino": "BancoB",
+   "canal": "Directo",
+   "comision": 8,
+   "comision_pct": 0,
+   "tiempo": 4,
+   "costo": 1,
+   "riesgo": 0.02,
+   "limite": 10000
+  },
+  {
+   "origen": "BancoA",
+   "destino": "BancoC",
+   "canal": "Directo",
+   "comision": 5,
+   "comision_pct": 0,
+   "tiempo": 2,
+   "costo": 1,
+   "riesgo": 0.02,
+   "limite": 50000,
+   "activo": "no"
+  },
+  {
+   "origen": "BancoA",
+   "destino": "RedATM",
+   "canal": "ATM",
+   "comision": 6.5,
+   "comision_pct": 0,
+   "tiempo": 0.1,
+   "costo": 0.5,
+   "riesgo": 0.03,
+   "limite": 1500
+  },
+  {
+   "origen": "BancoA",
+   "destino": "ProcTarjetas",
+   "canal": "Tarjeta",
+   "comision": 0,
+   "comision_pct": 2.5,
+   "tiempo": 0.1,
+   "costo": 0.2,
+   "riesgo": 0.04,
+   "limite": 8000
+  },
+  {
+   "origen": "BancoA",
+   "destino": "AgenciaLima",
+   "canal": "Interna",
+   "comision": 2,
+   "comision_pct": 0,
+   "tiempo": 1,
+   "costo": 1,
+   "riesgo": 0.01,
+   "limite": 100000
+  },
+  {
+   "origen": "CCE",
+   "destino": "BancoB",
+   "canal": "ACH",
+   "comision": 1.2,
+   "comision_pct": 0,
+   "tiempo": 2,
+   "costo": 0.3,
+   "riesgo": 0.01,
+   "limite": 30000
+  },
+  {
+   "origen": "CCE",
+   "destino": "BancoC",
+   "canal": "ACH",
+   "comision": 1.5,
+   "comision_pct": 0,
+   "tiempo": 3,
+   "costo": 0.3,
+   "riesgo": 0.01,
+   "limite": 30000
+  },
+  {
+   "origen": "LBTR",
+   "destino": "BancoB",
+   "canal": "LBTR",
+   "comision": 10,
+   "comision_pct": 0,
+   "tiempo": 0.5,
+   "costo": 1.5,
+   "riesgo": 0.01,
+   "limite": 5000000
+  },
+  {
+   "origen": "LBTR",
+   "destino": "BancoC",
+   "canal": "LBTR",
+   "comision": 10,
+   "comision_pct": 0,
+   "tiempo": 0.5,
+   "costo": 1.5,
+   "riesgo": 0.01,
+   "limite": 5000000
+  },
+  {
+   "origen": "BilleteraY",
+   "destino": "BancoC",
+   "canal": "Billetera",
+   "comision": 0.5,
+   "comision_pct": 0.3,
+   "tiempo": 0.2,
+   "costo": 0.1,
+   "riesgo": 0.04,
+   "limite": 2000
+  },
+  {
+   "origen": "BilleteraY",
+   "destino": "BilleteraP",
+   "canal": "Interbilletera",
+   "comision": 0,
+   "comision_pct": 0.1,
+   "tiempo": 0.05,
+   "costo": 0.05,
+   "riesgo": 0.06,
+   "limite": 1000
+  },
+  {
+   "origen": "BilleteraP",
+   "destino": "BancoC",
+   "canal": "Billetera",
+   "comision": 0.5,
+   "comision_pct": 0.3,
+   "tiempo": 0.2,
+   "costo": 0.1,
+   "riesgo": 0.05,
+   "limite": 1000
+  },
+  {
+   "origen": "BancoB",
+   "destino": "BancoC",
+   "canal": "Directo",
+   "comision": 6,
+   "comision_pct": 0,
+   "tiempo": 3,
+   "costo": 1,
+   "riesgo": 0.02,
+   "limite": 20000
+  },
+  {
+   "origen": "RedATM",
+   "destino": "BancoC",
+   "canal": "ATM",
+   "comision": 4.5,
+   "comision_pct": 0,
+   "tiempo": 0.4,
+   "costo": 0.5,
+   "riesgo": 0.03,
+   "limite": 1500
+  },
+  {
+   "origen": "ProcTarjetas",
+   "destino": "BancoC",
+   "canal": "Tarjeta",
+   "comision": 0,
+   "comision_pct": 1.5,
+   "tiempo": 48,
+   "costo": 0.2,
+   "riesgo": 0.03,
+   "limite": 8000
+  },
+  {
+   "origen": "AgenciaLima",
+   "destino": "AgenciaCusco",
+   "canal": "Interplaza",
+   "comision": 5,
+   "comision_pct": 0,
+   "tiempo": 6,
+   "costo": 2,
+   "riesgo": 0.02,
+   "limite": 20000
+  },
+  {
+   "origen": "AgenciaLima",
+   "destino": "AgenciaArequipa",
+   "canal": "Interplaza",
+   "comision": 4,
+   "comision_pct": 0,
+   "tiempo": 5,
+   "costo": 2,
+   "riesgo": 0.02,
+   "limite": 20000
+  },
+  {
+   "origen": "AgenciaArequipa",
+   "destino": "AgenciaCusco",
+   "canal": "Interplaza",
+   "comision": 4,
+   "comision_pct": 0,
+   "tiempo": 5,
+   "costo": 2,
+   "riesgo": 0.02,
+   "limite": 20000
+  },
+  {
+   "origen": "BancoC",
+   "destino": "AgenciaCusco",
+   "canal": "Interna",
+   "comision": 2,
+   "comision_pct": 0,
+   "tiempo": 1,
+   "costo": 1,
+   "riesgo": 0.01,
+   "limite": 100000
+  }
+ ]
+}

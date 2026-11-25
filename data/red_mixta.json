@@ -1,0 +1,30 @@
+{
+  "dirigido": true,
+  "ponderado": true,
+  "multi": false,
+  "nodos": [
+    {"id": "BovedaCentral", "tipo": "boveda_central", "ciudad": "Lima"},
+    {"id": "BovedaCusco", "tipo": "boveda_regional", "ciudad": "Cusco"},
+    {"id": "AgenciaCusco", "tipo": "agencia", "ciudad": "Cusco"},
+    {"id": "AgenciaSanSebastian", "tipo": "agencia", "ciudad": "Cusco"},
+    {"id": "ATM-01", "tipo": "atm", "ciudad": "Cusco"},
+    {"id": "CCE", "tipo": "compensacion"},
+    {"id": "BancoB", "tipo": "entidad"},
+    {"id": "Billetera1", "tipo": "plataforma"},
+    {"id": "ClienteJuan", "tipo": "cliente"},
+    {"id": "Cta-001", "tipo": "cuenta"},
+    {"id": "Cta-002", "tipo": "cuenta"}
+  ],
+  "aristas": [
+    {"origen": "BovedaCentral", "destino": "BovedaCusco", "capacidad": 500000, "costo": 1200, "tiempo": 24, "riesgo": 0.05},
+    {"origen": "BovedaCusco", "destino": "AgenciaCusco", "capacidad": 150000, "costo": 300, "tiempo": 3, "riesgo": 0.02},
+    {"origen": "BovedaCusco", "destino": "AgenciaSanSebastian", "capacidad": 100000, "costo": 350, "tiempo": 4, "riesgo": 0.03},
+    {"origen": "AgenciaCusco", "destino": "ATM-01", "capacidad": 30000, "costo": 80, "tiempo": 1, "riesgo": 0.01},
+    {"origen": "Cta-001", "destino": "CCE", "comision": 3.5, "tiempo": 2, "limite": 20000},
+    {"origen": "CCE", "destino": "BancoB", "comision": 1.2, "tiempo": 1, "limite": 20000},
+    {"origen": "BancoB", "destino": "Cta-002", "comision": 0.5, "tiempo": 1},
+    {"origen": "Cta-001", "destino": "Billetera1", "comision": 0.0, "tiempo": 0.1, "limite": 2000},
+    {"origen": "Billetera1", "destino": "Cta-002", "comision": 0.3, "tiempo": 0.1},
+    {"origen": "ClienteJuan", "destino": "Cta-001", "monto": 5000}
+  ]
+}
